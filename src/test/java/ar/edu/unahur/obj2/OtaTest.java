@@ -56,7 +56,8 @@ public class OtaTest {
 
 
     public void testBuscarVuelos() {
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico(provAmadeus);
         Ota ota = new Ota(distribuidorDeTrafico);
 
         DateTime fecha = new DateTime("2019-12-13");
@@ -70,7 +71,7 @@ public class OtaTest {
     @org.testng.annotations.Test
     public void testReservar() {
 
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico(provrWorldspan);
         Ota ota = new Ota(distribuidorDeTrafico);
         DateTime fecha = new DateTime("2019-12-13");
         List<Vuelo> vuelos = ota.buscarVuelos(fecha, "BUE", "MIA");
@@ -86,7 +87,7 @@ public class OtaTest {
 
     @org.testng.annotations.Test
     public void reservarAmadeus() {
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico(provAmadeus);
         ota=new Ota(distribuidorDeTrafico);
         DateTime fecha = new DateTime("2019-12-13");
         List<Vuelo> vuelos = ota.buscarVuelos(fecha, "BUE", "MIA");
@@ -101,7 +102,7 @@ public class OtaTest {
     }
     @org.testng.annotations.Test
     public void reservarSabre() {
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico( provSabre);
         Ota ota = new Ota(distribuidorDeTrafico);
         DateTime fecha = new DateTime("2019-12-13");
         List<Vuelo> vuelos = ota.buscarVuelos(fecha, "BUE", "MIA");
@@ -119,7 +120,7 @@ public class OtaTest {
 
     @org.testng.annotations.Test
     public void reservarWorldspan() {
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico(provrWorldspan);
         Ota ota = new Ota(distribuidorDeTrafico);
         DateTime fecha = new DateTime("2019-12-13");
         List<Vuelo> vuelos = ota.buscarVuelos(fecha, "BUE", "MIA");
@@ -135,7 +136,7 @@ public class OtaTest {
 
     @org.testng.annotations.Test
     public void buscarSabre() {
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico( provSabre);
         Ota ota = new Ota(distribuidorDeTrafico);
         DateTime fecha = new DateTime("2019-12-13");
         List<Vuelo> vOta = ota.buscarVuelos(fecha, "BUE", "MIA");
@@ -144,7 +145,7 @@ public class OtaTest {
 
 
     public void buscarWorldspan() {
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico(provrWorldspan);
         Ota ota = new Ota(distribuidorDeTrafico);
         DateTime fecha = new DateTime("2019-12-13");
         List<Vuelo> vOta = ota.buscarVuelos(fecha, "BUE", "MIA");
@@ -156,7 +157,7 @@ public class OtaTest {
 
     @org.testng.annotations.Test
     public void buscarAmadeus() {
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico(provAmadeus);
         Ota ota = new Ota(distribuidorDeTrafico);
         DateTime fecha = new DateTime("2019-12-13");
         List<Vuelo> vOta = ota.buscarVuelos(fecha, "BUE", "MIA");
