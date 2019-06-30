@@ -7,6 +7,7 @@ import org.joda.time.DateTime;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -41,4 +42,16 @@ public class Amadeus {
         return new Boleto(vueloAVender, pasajeros);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Amadeus amadeus = (Amadeus) o;
+        return vuelos.equals(amadeus.vuelos);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vuelos);
+    }
 }

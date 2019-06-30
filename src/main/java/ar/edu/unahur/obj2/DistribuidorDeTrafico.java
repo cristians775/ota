@@ -12,7 +12,7 @@ public class DistribuidorDeTrafico {
         switch (random.nextInt(9)) {
             case 0:
             case 1:
-            case 2: return new AmadeusAdapter(new Amadeus());
+            case 2:
             case 3:
             case 4:
             case 5: return new SabreAdapter(new Sabre());
